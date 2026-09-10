@@ -1,0 +1,66 @@
+:root {
+  --accent: #00bcd4;
+  --sidebar: #12121d;
+  --sidebar-active: #1d2130;
+  --statusbar: #12121d;
+  --border: #23233a;
+  --panel: #181826;
+  --muted: #7a7a95;
+  --danger: #e05561;
+  --background: #0d0d16;
+  --foreground: #d6d9e8;
+  --font-mono: "Cascadia Code", "Cascadia Mono", "JetBrains Mono", Consolas, monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: "Segoe UI Variable", "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-size: 13px;
+  color: var(--foreground);
+  background: var(--background);
+}
+
+body::-webkit-scrollbar,
+.sidebar-list::-webkit-scrollbar,
+.palette-list::-webkit-scrollbar,
+.notification-list::-webkit-scrollbar,
+.settings-content::-webkit-scrollbar,
+.ssh-form::-webkit-scrollbar,
+.ssh-saved::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb,
+.sidebar-list::-webkit-scrollbar-thumb,
+.palette-list::-webkit-scrollbar-thumb,
+.notification-list::-webkit-scrollbar-thumb,
+.settings-content::-webkit-scrollbar-thumb,
+.ssh-form::-webkit-scrollbar-thumb,
+.ssh-saved::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+button {
+  font-family: inherit;
+}
+
+code {
+  font-family: var(--font-mono);
+}
+
+.xterm .xterm-screen {
+  z-index: auto;
+}

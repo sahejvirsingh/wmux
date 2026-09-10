@@ -1,0 +1,122 @@
+.terminal-pane {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  position: relative;
+  background: var(--terminal-bg, #0d0d16);
+  border-radius: 6px;
+}
+
+.terminal-pane.focused {
+  outline: 1px solid var(--accent);
+  outline-offset: -1px;
+}
+
+.terminal-pane-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 24px;
+  padding: 0 6px;
+  flex: none;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid var(--border);
+  user-select: none;
+}
+
+.terminal-pane-title {
+  font-size: 11px;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 70%;
+}
+
+.terminal-pane-actions {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.icon-button:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--foreground);
+}
+
+.attention-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: ring-pulse 1.6s ease-in-out infinite;
+}
+
+.terminal-pane-body {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+}
+
+.terminal-xterm-container {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  padding: 2px 0 0 4px;
+}
+
+.terminal-xterm-container .xterm {
+  height: 100%;
+}
+
+.terminal-exited-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.55);
+  color: var(--muted);
+  font-size: 12px;
+  z-index: 6;
+}
+
+.terminal-search {
+  position: absolute;
+  top: 6px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px 6px;
+  z-index: 8;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.terminal-search input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--foreground);
+  font-size: 12px;
+  width: 180px;
+}

@@ -1,0 +1,110 @@
+.workspace-tab {
+  padding: 8px 10px;
+  margin: 4px 6px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+}
+
+.workspace-tab:hover {
+  background: var(--sidebar-active);
+}
+
+.workspace-tab.active {
+  background: var(--sidebar-active);
+  border-color: var(--accent);
+}
+
+.workspace-tab.drag-over {
+  border-top: 2px solid var(--accent);
+}
+
+.workspace-tab-name {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--foreground);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.workspace-tab-cwd {
+  font-size: 10.5px;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: var(--font-mono);
+}
+
+.workspace-tab-meta {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.workspace-tab-branch,
+.workspace-tab-ports {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 10px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+}
+
+.workspace-tab-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 16px;
+}
+
+.workspace-tab-badge {
+  background: var(--accent);
+  color: #000;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 999px;
+  min-width: 16px;
+  height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+}
+
+.workspace-tab-delete {
+  display: none;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 3px;
+}
+
+.workspace-tab:hover .workspace-tab-delete {
+  display: inline-flex;
+}
+
+.workspace-tab-delete:hover {
+  color: var(--danger);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.workspace-tab-edit {
+  background: var(--panel);
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  color: var(--foreground);
+  font-size: 12.5px;
+  padding: 2px 6px;
+  outline: none;
+  width: 100%;
+}

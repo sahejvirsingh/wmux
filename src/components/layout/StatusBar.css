@@ -1,0 +1,59 @@
+.statusbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 26px;
+  flex: none;
+  padding: 0 10px;
+  background: var(--statusbar);
+  border-top: 1px solid var(--border);
+  user-select: none;
+}
+
+.statusbar-left,
+.statusbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.statusbar-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.statusbar-item.muted {
+  opacity: 0.6;
+}
+
+.statusbar-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 20px;
+  padding: 0 6px;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-size: 11px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.statusbar-button:hover {
+  background: var(--sidebar-active);
+  color: var(--foreground);
+}
+
+.statusbar-button.has-notifications {
+  color: var(--accent);
+  animation: ring-pulse 1.6s ease-in-out infinite;
+}

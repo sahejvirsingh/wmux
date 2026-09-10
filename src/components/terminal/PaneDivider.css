@@ -1,0 +1,23 @@
+.pane-divider {
+  flex: none;
+  z-index: 10;
+  background: var(--border);
+  transition: background 120ms ease;
+}
+
+.pane-divider.vertical {
+  width: 4px;
+  margin: 0 1px;
+  cursor: col-resize;
+}
+
+.pane-divider.horizontal {
+  height: 4px;
+  margin: 1px 0;
+  cursor: row-resize;
+}
+
+.pane-divider:hover,
+.pane-divider:active {
+  background: var(--accent);
+}
